@@ -1,5 +1,5 @@
 ## Disclaimer
-This is just a modified repo of [MultiGarmentNetwork](https://github.com/bharat-b7/MultiGarmentNetwork) github repository, made for running in python 3.7. Please visit the original repository for details.
+This is just a modified version of [MultiGarmentNetwork](https://github.com/bharat-b7/MultiGarmentNetwork) github repository, made for running in python 3.x. Please visit the original repository for details.
 
 # MultiGarmentNetwork
 Repo for **"Multi-Garment Net: Learning to Dress 3D People from Images, ICCV'19"**
