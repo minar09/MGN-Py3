@@ -1,0 +1,7 @@
+.idea/
+assets/
+assets-win/
+saved_model/
+*.pyc
+*.pkl
+*.npy
