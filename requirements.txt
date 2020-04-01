@@ -1,5 +1,5 @@
 tensorflow-gpu>=1.13.2
 matplotlib
 chumpy
-git+git://github.com/pmh47/dirt.git
-git+git://github.com/MPI-IS/mesh.git
+dirt
+psbody-mesh

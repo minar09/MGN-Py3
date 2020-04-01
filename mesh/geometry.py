@@ -16,7 +16,9 @@ def sparse_dense_matmul_batch(a, b):
     indices = tf.reshape(a.indices, (num_b, -1, 3))
     values = tf.reshape(a.values, (num_b, -1))
 
-    def matmul((i, bb)):
+    # def matmul((i, bb)):
+    def matmul(ibb):  # python 3 change
+        (i, bb) = ibb
         sp = tf.SparseTensor(indices[i, :, 1:], values[i], shape[1:])
         return i, tf.sparse_tensor_dense_matmul(sp, bb)
 
@@ -217,14 +219,14 @@ if __name__ == "__main__":
         tf_L_e = tf.sparse_tensor_to_dense(tf_L).eval()
         tf_lap_e = tf_lap.eval()
 
-    print np.max(np.abs(tf_L_e[0] - L0.toarray()))
-    print np.max(np.abs(tf_L_e[-1] - L0.toarray()))
-    print tf_L_e.shape
+    print(np.max(np.abs(tf_L_e[0] - L0.toarray())))
+    print(np.max(np.abs(tf_L_e[-1] - L0.toarray())))
+    print(tf_L_e.shape)
     # print np.max(np.abs(tf_L0_e[0] - L0.toarray()))
 
-    print np.max(np.abs(tf_lap_e[0] - lap0))
-    print np.max(np.abs(tf_lap_e[-1] - lap0))
-    print np.max(np.abs(tf_lap_e[0] - tf_lap_e[-1]))
+    print(np.max(np.abs(tf_lap_e[0] - lap0)))
+    print(np.max(np.abs(tf_lap_e[-1] - lap0)))
+    print(np.max(np.abs(tf_lap_e[0] - tf_lap_e[-1])))
 
     # from opendr.topology import get_vertices_per_edge
     # e_idx = get_vertices_per_edge(m.v, m.f)

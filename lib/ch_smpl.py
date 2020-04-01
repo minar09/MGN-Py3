@@ -6,8 +6,8 @@ import chumpy as ch
 import pickle as pkl  # Python 3 change
 import scipy.sparse as sp
 from chumpy.ch import Ch
-from posemapper import posemap, Rodrigues
-from serialization import backwards_compatibility_replacements
+from .posemapper import posemap, Rodrigues
+from .serialization import backwards_compatibility_replacements
 
 from lib.geometry import laplacian, get_hres
 from lib.ch import sp_dot

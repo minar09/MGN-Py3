@@ -1,4 +1,4 @@
-from custom_layers import PCA_, NameLayer, Scatter_
+from .custom_layers import PCA_, NameLayer, Scatter_
 from mesh.geometry import compute_laplacian_diff
 from smpl.batch_smpl import SMPL
 from smpl.batch_lbs import batch_rodrigues

@@ -20,7 +20,7 @@ import pickle as pkl  # Python 3 change
 import numpy as np
 import chumpy as ch
 from chumpy.ch import MatVecMult
-from verts import verts_core
+from .verts import verts_core
 
 
 def backwards_compatibility_replacements(dd):

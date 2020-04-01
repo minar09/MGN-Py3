@@ -67,12 +67,12 @@ if __name__ == '__main__':
     smpl = Smpl(dp.get_hres_smpl_model_data())
 
     # This file contains correspondances between garment vertices and smpl body
-    # fts_file = 'assets/garment_fts.pkl'
-    fts_file = 'assets-win/garment_fts_unix.pkl'
+    fts_file = 'assets/garment_fts.pkl'
+    # fts_file = 'assets-win/garment_fts_unix.pkl'
     vert_indices, fts = pkl.load(open(fts_file))
     fts['naked'] = ft
 
-    # Choose any garmet type
+    # Choose any garment type
     garment_type = 'Pants'
     # Randomly pick from the digital wardrobe
     index = np.random.randint(0, len(gar_dict[garment_type]))

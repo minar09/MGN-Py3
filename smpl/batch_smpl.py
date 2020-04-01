@@ -12,7 +12,7 @@ from __future__ import print_function
 
 import os
 import numpy as np
-import cPickle as pickle
+import pickle as pkl  # Python 3 change
 
 import tensorflow as tf
 # tf.enable_eager_execution()

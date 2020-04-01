@@ -10,9 +10,10 @@ import scipy.sparse as sp
 # Set your paths here
 # SMPL_PATH = '/BS/RVH/work/data/smpl_models/neutral/basicModel_neutral_lbs_10_207_0_v1.0.0.pkl'
 SMPL_PATH = './assets/basicModel_neutral_lbs_10_207_0_v1.0.0.pkl'
+# SMPL_PATH = './assets-win/basicModel_neutral_lbs_10_207_0_v1.0.0_unix.pkl'
 # smpl_vt_ft_path = '/BS/bharat/work/MGN_final_release/assets/smpl_vt_ft.pkl'
-# smpl_vt_ft_path = './assets/smpl_vt_ft.pkl'
-smpl_vt_ft_path = './assets-win/smpl_vt_ft_unix.pkl'
+smpl_vt_ft_path = './assets/smpl_vt_ft.pkl'
+# smpl_vt_ft_path = './assets-win/smpl_vt_ft_unix.pkl'
 
 
 class SmplPaths:
