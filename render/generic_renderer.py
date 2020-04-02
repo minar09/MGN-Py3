@@ -1,4 +1,4 @@
-from lighting import split_vertices_by_face, diffuse_directional, vertex_normals_pre_split, diffuse_point
+from .lighting import split_vertices_by_face, diffuse_directional, vertex_normals_pre_split, diffuse_point
 import sys
 # sys.path.append('/BS/alldieck-3dpeople/work/lib/dirt/')
 import numpy as np

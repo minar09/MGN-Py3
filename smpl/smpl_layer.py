@@ -1,6 +1,6 @@
 import tensorflow as tf
 
-from batch_smpl import SMPL
+from .batch_smpl import SMPL
 import pickle as pkl  # Python 3 change
 
 from mesh.geometry import sparse_to_tensor, sparse_dense_matmul_batch_tile
@@ -20,7 +20,11 @@ class SmplBody25Layer(tf.keras.Model):
         with tf.device('cpu:0'):
             return sparse_dense_matmul_batch_tile(tf.cast(self.body_25_reg, v.dtype), v)
 
-    def call(self, (pose, betas, trans)):
+    # def call(self, (pose, betas, trans)):
+    def call(self, pbt):  # python 3 change
+
+        (pose, betas, trans) = pbt
+
         if self.isHres:
             v_personal = tf.tile(tf.zeros((1, 27554, 3)),
                                  (tf.shape(betas)[0], 1, 1))
