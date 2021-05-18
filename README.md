@@ -6,19 +6,23 @@ Repo for **"Multi-Garment Net: Learning to Dress 3D People from Images, ICCV'19"
 
 Link to paper: https://arxiv.org/abs/1908.06903
 
+### Update 01 May 2020:
+Added more garments here [Part-2](https://datasets.d2.mpi-inf.mpg.de/MultiGarmentNetwork/Multi-Garmentdataset_02.zip)
+
 ## Dress SMPL body model with our Digital Wardrobe
 
-1. Download digital wardrobe: https://datasets.d2.mpi-inf.mpg.de/MultiGarmentNetwork/Multi-Garmentdataset.zip
+1. Download digital wardrobe: [Part-1](https://datasets.d2.mpi-inf.mpg.de/MultiGarmentNetwork/Multi-Garmentdataset.zip) and [Part-2](https://datasets.d2.mpi-inf.mpg.de/MultiGarmentNetwork/Multi-Garmentdataset_02.zip).
 This dataset contains scans, SMPL registration, texture_maps, segmentation_maps and multi-mesh registered garments.
-2. visualize_scan.py: Load scan and visualize texture and segmentation
-3. visualize_garments.py: Visualize random garment and coresponding SMPL model
-4. dress_SMPL.py: Load random garment and dress desired SMPL body with it
+
+2. visualize_scan.py: Load scan and visualize texture and segmentation.
+
+3. visualize_garments.py: Visualize random garment and coresponding SMPL model.
+
+4. dress_SMPL.py: Load random garment and dress desired SMPL body with it.
 
 
 ## Pre-requisites for running MGN
-The code has been tested in python 3.6, Tensorflow 1.13
-
-Run `pip install -r requirements.txt`
+The code has been tested in python 2.7, Tensorflow 1.13
 
 Download the neutral SMPL model from http://smplify.is.tue.mpg.de/ and place it in the `assets` folder.
 ```
@@ -30,7 +34,7 @@ Download and install DIRT: https://github.com/pmh47/dirt.
 Download and install mesh packages for visualization: https://github.com/MPI-IS/mesh
 
 This repo contains code to run pretrained MGN model.
-Download saved weights from : https://1drv.ms/u/s!AohQYySSg0mRmju7Of80mQ09wR5-?e=IbbHQ1
+Download saved weights from : https://datasets.d2.mpi-inf.mpg.de/MultiGarmentNetwork/weights.zip
 
 ## Data preparation
 
@@ -79,3 +83,5 @@ The above copyright notice and this permission notice shall be included in all c
 
 Chaitanya Patel: code for interpenetration removal, Thiemo Alldieck: code for texture/segmentation
 stitching and Verica Lazova: code for data anonymization.
+
+We thank Twindom and RenderPeople for providing data for the project. 
